@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('xmas-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.snow, .snow2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  url('snow.png');
+    background-position: 0 0;
+}
+.snow{
+    background-size: 70em;
+    animation: snowfall 20s linear infinite;
+    opacity: 0.6;
+}
+.snow2{
+    background-size: 50em;
+    animation: snowfall2 20s linear infinite;
+    opacity: 0.5;
+}
+@keyframes snowfall {
+    100%{
+        background-position: 70em 70em;
+    }
+}
+@keyframes snowfall2 {
+    100%{
+        background-position: 0em 140em;
+    }
+}
+.text h1{
+    font-size: 9rem;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    line-height: 140px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    background: url('back-text.png');
+    background-clip: text;
+    background-position: 0 0;
+    animation: textEffect 30s linear infinite alternate;
+    user-select: none;
+}
+@keyframes textEffect{
+    100%{
+        background-position: 2000px 0;
+    }
+}

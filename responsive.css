@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@media only screen and (max-width:426px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('xmas-bg-mb.png') no-repeat;
+        background-size: cover;
+    }
+    .text h1{
+        font-size: 4rem;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        line-height: 80px;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        background: url('back-text.png');
+        background-clip: text;
+        background-position: 0 0;
+        animation: textEffect 25s linear infinite alternate;
+        user-select: none;
+    }
+    @keyframes textEffect{
+        100%{
+            background-position: 2000px 0;
+        }
+    }
+}
